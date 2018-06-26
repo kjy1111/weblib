@@ -29,7 +29,6 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
 
         MyHTTPRequestHandler.__dict__[handle_name](self)
 
-
     def get_parameter(self, name):
         qindex = self.path.find('?')
 
@@ -44,13 +43,11 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
 
         return None if values is None else values.pop()
 
-
     def ex1(self):
         self.send_response(200)
         self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write('<h1>Hello World!</h1>'.encode('utf-8'))
-
 
     def ex2(self):
         arr = np.random.normal(5, 3, 500)
