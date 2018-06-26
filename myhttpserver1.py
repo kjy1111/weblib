@@ -10,7 +10,7 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.end_headers()
-        self.wfile.write('<h1>Hello Woed!</h1>'.encode('utf-8'))
+        self.wfile.write('<h1>Hello World!</h1>'.encode('utf-8'))
 
 
 # 서버 구동
